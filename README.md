@@ -1,14 +1,14 @@
-# 使用Railway部署Xray高性能代理服务，通过ws传输的 (vmess、vless、trojan shadowsocks、socks)等协议
+# 使用Railway部署某ray高性能代理服务，通过ws传输的 (vmess、vless、trojan shadowsocks、socks)等协议
 
 > 提醒： 滥用可能导致账户被BAN！！！ 
 
 ## 概述
 
-用于在 railway 上部署 vless+websocket+tls，每次部署自动选择最新的 alpine linux 和 Xray core 。  
+用于在 railway 上部署 vless+websocket+tls，每次部署自动选择最新的 alpine linux 和 某ray core 。  
 vless 性能更加优秀，占用资源更少。
 
-* 使用[xray](https://github.com/XTLS/Xray-core)+caddy同时部署通过ws传输的vmess vless trojan shadowsocks socks等协议，并默认已配置好伪装网站。
-* 支持tor网络，且可通过自定义网络配置文件启动xray和caddy来按需配置各种功能  
+* 使用[某Ray](https://github.com/XTLS/某Ray-core)+caddy同时部署通过ws传输的vmess vless trojan shadowsocks socks等协议，并默认已配置好伪装网站。
+* 支持tor网络，且可通过自定义网络配置文件启动某Ray和caddy来按需配置各种功能  
 * 支持存储自定义文件,目录及账号密码均为UUID,客户端务必使用TLS连接  
 
 
@@ -24,15 +24,15 @@ fork 之后 ，在railway的dashboard，选择 new project
 * **务必替换所有的`xxx.railway.app`为railway分配的项目域名**  
 * **务必替换所有的`24b4b1e1-7a89-45f6-858c-242cf53b5bdb`为部署时设置的UUID,建议更改,不要每个人都一样**  
 
-**XRay 将在部署时会自动实配安装`最新版本`。**
+**某Ray 将在部署时会自动实配安装`最新版本`。**
 
 
 
 <details>
-<summary>V2rayN(Xray、V2ray)</summary>
+<summary>某2RayN(某Ray、某2Ray)</summary>
 
 ```bash
-* 客户端下载：https://github.com/2dust/v2rayN/releases
+* 客户端下载：https://github.com/2dust/某2RayN/releases
 * 代理协议：vless 或 vmess
 * 地址：xxx.herokuapp.com
 * 端口：443
@@ -80,7 +80,7 @@ fork 之后 ，在railway的dashboard，选择 new project
 * 端口: 443
 * 密码：24b4b1e1-7a89-45f6-858c-242cf53b5bdb
 * 加密：chacha20-ietf-poly1305
-* 插件程序：xray-plugin_windows_amd64.exe  //需将插件https://github.com/shadowsocks/xray-plugin/releases下载解压后放至shadowsocks同目录
+* 插件程序：某Ray-plugin_windows_amd64.exe  //需将插件https://github.com/shadowsocks/某Ray-plugin/releases下载解压后放至shadowsocks同目录
 * 插件选项: tls;host=xxx.herokuapp.com;path=/24b4b1e1-7a89-45f6-858c-242cf53b5bdb-ss
 ```
 </details>
@@ -121,7 +121,5 @@ addEventListener(
 
 ## 关于CF筛选IP
 
-* 请参考 [CloudflareSpeedTest](https://github.com/XIU2/CloudflareSpeedTest) `推荐`
+* 请参考 [Cloudflare某test](https://github.com/XIU2/Cloudflare某test) `推荐`
 * 请参考 [better-cloudflare-ip](https://github.com/badafans/better-cloudflare-ip)
-
-
